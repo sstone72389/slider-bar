@@ -1,0 +1,23 @@
+h1 {
+  font-family: verdana;
+  text-align: center;
+}
+
+button {
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  background: black;
+  width: 175px;
+  padding: 26px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-right: 40px;
+}
+
+#all-sticks{
+  color: black;
+  background: white;
+  border: 2px #797979 solid;
+}

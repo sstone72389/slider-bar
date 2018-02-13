@@ -3,7 +3,7 @@ h1 {
   text-align: center;
 }
 
-button {
+.stick-slide-btn {
   font-family: verdana;
   font-weight: bold;
   font-size: 14px;
@@ -16,8 +16,23 @@ button {
   margin-right: 40px;
 }
 
-#all-sticks{
+.stick-slide-btn:active{
   color: black;
   background: white;
   border: 2px #797979 solid;
+}
+
+.stick-desc {
+  font-size: 12px;
+  font-family: verdana;
+  max-width: 175px;
+}
+
+.ctr-me {
+  text-align: center;
+}
+
+/* removes blue focus on all elements for demo */
+*:focus {
+    outline: none;
 }

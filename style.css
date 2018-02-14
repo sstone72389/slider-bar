@@ -4,6 +4,10 @@ h1 {
   font-size: 25px;
 }
 
+#all-sticks {
+  margin-left: 15px;
+}
+
 .cat-slide-btn {
   color: white;
   text-transform: uppercase;
@@ -15,7 +19,7 @@ h1 {
   padding: 26px;
   border: 1px black solid;
   border-radius: 5px;
-  margin-right: 35px;
+  margin-right: 22px;
 }
 
 .cat-slider-link {
@@ -74,6 +78,9 @@ h1 {
   .cat-slide-btn:active {
     padding: 15px;
   }
+  #all-sticks {
+    margin-left: 20px;
+  }
 }
 
 @media screen and (max-width:767px) {
@@ -93,5 +100,8 @@ h1 {
   }
   .cat-slide-btn:active {
     padding: 17px;
+  }
+  #all-sticks {
+    margin-left: 0px;
   }
 }

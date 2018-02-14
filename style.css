@@ -1,25 +1,31 @@
 h1 {
   font-family: verdana;
   text-align: center;
+  font-size: 25px;
 }
 
 .stick-slide-btn {
-  font-family: verdana;
   font-weight: bold;
   font-size: 14px;
   color: white;
   background: black;
-  width: 175px;
+  width: 180px;
+  height: 67px;
   padding: 26px;
   text-transform: uppercase;
+  border: 1px black solid;
   border-radius: 5px;
-  margin-right: 40px;
+  margin-right: 35px;
 }
 
 .stick-slide-btn:active{
   color: black;
   background: white;
-  border: 2px #797979 solid;
+  border: 3px #797979 solid;
+}
+
+.stick-slide-btn:hover{
+  color: lightgray;
 }
 
 .stick-desc {
@@ -30,9 +36,51 @@ h1 {
 
 .ctr-me {
   text-align: center;
+  /* base style needed in case slick doesn't load */
+  float: left;
 }
 
 /* removes blue focus on all elements for demo */
 *:focus {
     outline: none;
+}
+
+
+@media screen and (max-width:1020px) {
+  .stick-slide-btn {
+    font-size: 12px;
+    color: white;
+    line-height: 10px;
+    background: black;
+    max-width: 130px;
+    height: 50px;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  .stick-desc {
+    font-size: 10px;
+    font-family: verdana;
+    max-width: 175px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .stick-slide-btn {
+    font-size: 11px;
+    line-height: 2px;
+    color: white;
+    background: black;
+    height: 30px;
+    padding: 22px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  .stick-desc {
+    font-size: 8px;
+    font-family: verdana;
+    max-width: 175px;
+  }
 }

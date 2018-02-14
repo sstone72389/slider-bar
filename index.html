@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>slider test</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="stylesheet" type="text/css" href=./slick.css>
@@ -13,31 +14,32 @@
 <body>
 
   <h1>Responsive stick selection test page</h1>
+  <br>
+  <br>
 
-    <div class="responsive">
-      <div class="ctr-me">
-        <button class="stick-slide-btn" id="all-sticks" type="button" name="all-sticks">All Sticks</button>
-      </div>
-      <div class="ctr-me">
-        <button class="stick-slide-btn" id="senior" type="button" name="senior">Senior</button>
-        <p class="stick-desc" >14+ YEARS OLD <br> FLEX = 65-112</p>
-      </div>
-      <div class="ctr-me">
-        <button class="stick-slide-btn" id="intermediate" type="button" name="intermediate">Intermediate</button>
-        <p class="stick-desc" >12-14 YEARS OLD <br> FLEX = 55-75</p>
-      </div>
-      <div class="ctr-me">
-        <button class="stick-slide-btn" id="junior" type="button" name="junior">Junior</button>
-        <p class="stick-desc" >7-13 YEARS OLD <br> FLEX = 30-60</p>
-      </div>
-      <div class="ctr-me">
-        <button class="stick-slide-btn" id="youth" type="button" name="youth">Youth</button>
-        <p class="stick-desc" >3-8 YEARS OLD <br> FLEX = 20-40</p>
-      </div>
+  <div class="responsive">
+    <div class="ctr-me">
+      <button class="stick-slide-btn" id="all-sticks" type="button" name="all-sticks">All Sticks</button>
     </div>
+    <div class="ctr-me">
+      <button class="stick-slide-btn" id="senior" type="button" name="senior">Senior</button>
+      <p class="stick-desc">14+ YEARS OLD <br> FLEX = 65-112</p>
+    </div>
+    <div class="ctr-me">
+      <button class="stick-slide-btn" id="intermediate" type="button" name="intermediate">Intermediate</button>
+      <p class="stick-desc">12-14 YEARS OLD <br> FLEX = 55-75</p>
+    </div>
+    <div class="ctr-me">
+      <button class="stick-slide-btn" id="junior" type="button" name="junior">Junior</button>
+      <p class="stick-desc">7-13 YEARS OLD <br> FLEX = 30-60</p>
+    </div>
+    <div class="ctr-me">
+      <button class="stick-slide-btn" id="youth" type="button" name="youth">Youth</button>
+      <p class="stick-desc">3-8 YEARS OLD <br> FLEX = 20-40</p>
+    </div>
+  </div>
 
 
-  <script type="text/javascript" src="./slick.min.js"></script>
 
   <script>
     $(document).ready(function() {
@@ -47,39 +49,37 @@
         infinite: false,
         speed: 300,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         variableWidth: true,
-        responsive: [{
+        swipeToSlide: true,
+        autoplay:false,
+        responsive: [
+
+          // {
+          //   breakpoint: 9999,
+          //   settings: "unslick"
+          // },
+
+          {
             breakpoint: 1020,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: false,
-              dots: false
+              slidesToScroll: 2,
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1
             }
           }
-          ,
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
         ]
       });
     });
   </script>
+
+  <script type="text/javascript" src="./slick.min.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
 
 </body>
 

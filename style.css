@@ -4,28 +4,37 @@ h1 {
   font-size: 25px;
 }
 
-.stick-slide-btn {
+.cat-slide-btn {
+  color: white;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
-  color: white;
   background: black;
   width: 180px;
   height: 67px;
   padding: 26px;
-  text-transform: uppercase;
   border: 1px black solid;
   border-radius: 5px;
   margin-right: 35px;
 }
 
-.stick-slide-btn:active{
+.cat-slider-link {
+  padding-bottom: 26px;
+}
+
+.cat-slide-btn:active {
   color: black;
   background: white;
   border: 3px #797979 solid;
+  padding: 24px;
 }
 
-.stick-slide-btn:hover{
+.cat-slide-btn:hover {
   color: lightgray;
+}
+
+.cat-slide-btn:active {
+  color: black;
 }
 
 .stick-desc {
@@ -34,28 +43,26 @@ h1 {
   max-width: 175px;
 }
 
-.ctr-me {
+.dflt-styles {
   text-align: center;
   /* base style needed in case slick doesn't load */
   float: left;
 }
 
 /* removes blue focus on all elements for demo */
+
 *:focus {
-    outline: none;
+  outline: none;
 }
 
-
 @media screen and (max-width:1020px) {
-  .stick-slide-btn {
+  .cat-slide-btn {
+    font-weight: bold;
     font-size: 12px;
-    color: white;
     line-height: 10px;
-    background: black;
     max-width: 130px;
     height: 50px;
-    padding: 20px;
-    text-transform: uppercase;
+    padding: 18px;
     border-radius: 5px;
     margin-right: 20px;
   }
@@ -64,23 +71,27 @@ h1 {
     font-family: verdana;
     max-width: 175px;
   }
+  .cat-slide-btn:active {
+    padding: 15px;
+  }
 }
 
 @media screen and (max-width:767px) {
-  .stick-slide-btn {
+  .cat-slide-btn {
+    font-weight: bold;
     font-size: 11px;
     line-height: 2px;
-    color: white;
-    background: black;
-    height: 30px;
-    padding: 22px;
-    text-transform: uppercase;
+    max-width: 120px;
     border-radius: 5px;
     margin-right: 20px;
+    padding: 20px;
   }
   .stick-desc {
     font-size: 8px;
     font-family: verdana;
     max-width: 175px;
+  }
+  .cat-slide-btn:active {
+    padding: 17px;
   }
 }

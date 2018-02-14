@@ -17,24 +17,44 @@
   <br>
   <br>
 
-  <div class="responsive">
-    <div class="ctr-me">
-      <button class="stick-slide-btn" id="all-sticks" type="button" name="all-sticks">All Sticks</button>
+  <div class="stick-cat-slider">
+    <div class="dflt-styles">
+      <a class="cat-link-all" href="#">
+        <button class="cat-slide-btn" id="all-sticks" type="button" name="all-sticks">
+          All Sticks
+        </button>
+      </a>
     </div>
-    <div class="ctr-me">
-      <button class="stick-slide-btn" id="senior" type="button" name="senior">Senior</button>
+    <div class="dflt-styles">
+      <a class="cat-link-senior" href="#">
+        <button class="cat-slide-btn" id="senior" type="button" name="senior">
+          Senior
+        </button>
+      </a>
       <p class="stick-desc">14+ YEARS OLD <br> FLEX = 65-112</p>
     </div>
-    <div class="ctr-me">
-      <button class="stick-slide-btn" id="intermediate" type="button" name="intermediate">Intermediate</button>
+    <div class="dflt-styles">
+      <a class="cat-link-intermediate" href="#">
+        <button class="cat-slide-btn" id="intermediate" type="button" name="intermediate">
+          intermediate
+        </button>
+      </a>
       <p class="stick-desc">12-14 YEARS OLD <br> FLEX = 55-75</p>
     </div>
-    <div class="ctr-me">
-      <button class="stick-slide-btn" id="junior" type="button" name="junior">Junior</button>
+    <div class="dflt-styles">
+      <a class="cat-link-junior" href="#">
+        <button class="cat-slide-btn" id="junior" type="button" name="junior">
+          Junior
+        </button>
+      </a>
       <p class="stick-desc">7-13 YEARS OLD <br> FLEX = 30-60</p>
     </div>
-    <div class="ctr-me">
-      <button class="stick-slide-btn" id="youth" type="button" name="youth">Youth</button>
+    <div class="dflt-styles">
+      <a class="cat-link-youth" href="#">
+        <button class="cat-slide-btn" id="youth" type="button" name="youth">
+          Youth
+        </button>
+      </a>
       <p class="stick-desc">3-8 YEARS OLD <br> FLEX = 20-40</p>
     </div>
   </div>
@@ -43,7 +63,7 @@
 
   <script>
     $(document).ready(function() {
-      $('.responsive').slick({
+      $('.stick-cat-slider').slick({
         dots: false,
         arrows: false,
         infinite: false,
@@ -52,7 +72,7 @@
         slidesToScroll: 2,
         variableWidth: true,
         swipeToSlide: true,
-        autoplay:false,
+        autoplay: false,
         responsive: [
 
           // {

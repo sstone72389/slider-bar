@@ -1,11 +1,23 @@
-h1 {
-  font-family: verdana;
+.dflt-styles {
   text-align: center;
-  font-size: 25px;
+  /* base style needed in case slick doesn't load */
+  float: left;
 }
 
-#all-sticks {
-  margin-left: 15px;
+.lp-facet-slider {
+  min-width: 767px;
+}
+
+.dflt-styles a {
+  margin: 0px 10px;
+  display: inline-block;
+}
+
+.cat-slide-btn.selected {
+  color: black;
+  background: white;
+  border: 3px #797979 solid;
+  padding: 2px;
 }
 
 .cat-slide-btn {
@@ -16,28 +28,21 @@ h1 {
   background: black;
   width: 180px;
   height: 67px;
-  padding: 26px;
   border: 1px black solid;
   border-radius: 5px;
-  margin-right: 22px;
+  display: block;
+  margin: 0 auto;
 }
 
 .cat-slider-link {
   padding-bottom: 26px;
 }
 
-.cat-slide-btn:active {
-  color: black;
-  background: white;
-  border: 3px #797979 solid;
-  padding: 24px;
-}
-
 .cat-slide-btn:hover {
   color: lightgray;
 }
 
-.cat-slide-btn:active {
+.cat-slide-btn.selected:hover {
   color: black;
 }
 
@@ -47,16 +52,14 @@ h1 {
   max-width: 175px;
 }
 
-.dflt-styles {
-  text-align: center;
-  /* base style needed in case slick doesn't load */
-  float: left;
-}
-
-/* removes blue focus on all elements for demo */
+/* removes blue focus on all elements */
 
 *:focus {
   outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width:1020px) {
@@ -66,9 +69,8 @@ h1 {
     line-height: 10px;
     max-width: 130px;
     height: 50px;
-    padding: 18px;
+    padding: 15px;
     border-radius: 5px;
-    margin-right: 20px;
   }
   .stick-desc {
     font-size: 10px;
@@ -77,9 +79,6 @@ h1 {
   }
   .cat-slide-btn:active {
     padding: 15px;
-  }
-  #all-sticks {
-    margin-left: 20px;
   }
 }
 
@@ -90,18 +89,13 @@ h1 {
     line-height: 2px;
     max-width: 120px;
     border-radius: 5px;
-    margin-right: 20px;
-    padding: 20px;
   }
   .stick-desc {
-    font-size: 8px;
+    font-size: 10px;
     font-family: verdana;
     max-width: 175px;
   }
   .cat-slide-btn:active {
     padding: 17px;
-  }
-  #all-sticks {
-    margin-left: 0px;
   }
 }

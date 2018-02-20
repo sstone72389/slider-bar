@@ -1,10 +1,10 @@
-// var isMobile = true;
-//
 // function resizer() {
 //   var w = $(window).width();
 //   if (w < 1000) {
-//     console.log("resize");
-//     $('.responsive').slick({
+//     if ($('.stick-cat-slider.slick-initialized').length > 0) {
+//       return;
+//     }
+//     $('.stick-cat-slider').slick({
 //       dots: false,
 //       arrows: false,
 //       infinite: false,
@@ -14,7 +14,14 @@
 //       variableWidth: true,
 //       swipeToSlide: true,
 //       autoplay: false,
-//       responsive: [{
+//       responsive: [
+//
+//         // {
+//         //   breakpoint: 9999,
+//         //   settings: "unslick"
+//         // },
+//
+//         {
 //           breakpoint: 1020,
 //           settings: {
 //             slidesToScroll: 2,
@@ -29,17 +36,13 @@
 //         }
 //       ]
 //     });
-//     isMobile = true;
+//     console.log("slicked");
 //   } else {
-//     isMobile = false;
-//     $('.responsive').slick({
-//       responsive: [
-//         {
-//           breakpoint: 9999,
-//           settings: "unslick"
-//         },
-//       ]
-//     });
+//     if ($('.stick-cat-slider.slick-initialized').length == 0) {
+//       return;
+//     }
+//     $('.stick-cat-slider').slick("unslick");
+//     console.log("unslicked");
 //   }
 // }
 //

@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="stylesheet" type="text/css" href=./slick.css>
   <link rel="stylesheet" type="text/css" href=./slick-theme.css>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,53 +17,73 @@
   <br>
   <br>
 
+  <!-- Temporary script to allow selected class to be applied for demo test -->
+  <!-- Also will allows autoscroll to selected element -->
+
   <script>
-  function resizer() {
-    var w = $(window).width();
-    if (w < 1000) {
-      if ($('.lp-facet-slider.slick-initialized').length > 0) {
-        return;
-      }
-      $('.lp-facet-slider').slick({
-        dots: false,
-        arrows: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 2,
-        variableWidth: true,
-        swipeToSlide: true,
-        autoplay: false,
-        responsive: [
-          {
-            breakpoint: 1020,
-            settings: {
-              slidesToScroll: 2,
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          }
-        ]
+    $(function() {
+      // this var is needed in VS
+      $('body').on('click', '.cat-slide-btn', function() {
+        $('.cat-slide-btn').removeClass('selected');
+        $(this).addClass('selected');
+        var slickIndex = $(this).closest('.slick-slide').data('slickIndex');
+        console.log('this button is selected:', slickIndex);
+        $('.lp-facet-slider').slick('slickGoTo', slickIndex, true);
       });
-      console.log("slicked");
-    } else {
-      if ($('.lp-facet-slider.slick-initialized').length == 0) {
-        return;
-      }
-      $('.lp-facet-slider').slick("unslick");
-      console.log("unslicked");
-    }
-  }
-  $(window).on('load resize', function() {
-    resizer();
-  });
+    });
   </script>
-<script>
+
+
+  <script>
+    function resizer() {
+      var w = $(window).width();
+      if (w < 1000) {
+        if ($('.lp-facet-slider.slick-initialized').length > 0) {
+          return;
+        }
+        $('.lp-facet-slider').slick({
+          cssEase: 'linear',
+          touchThreshold: 15,
+          dots: false,
+          arrows: false,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          variableWidth: true,
+          swipeToSlide: true,
+          autoplay: false,
+          responsive: [{
+              breakpoint: 1020,
+              settings: {
+                slidesToScroll: 2,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+        console.log("slicked");
+      } else {
+        if ($('.lp-facet-slider.slick-initialized').length == 0) {
+          return;
+        }
+        $('.lp-facet-slider').slick("unslick");
+        console.log("unslicked");
+      }
+    }
+    $(window).on('load resize', function() {
+      resizer();
+    });
+  </script>
+
+  <!-- Original script used for website -->
+  <!-- <script>
     $(function() {
       var loc = window.location.href;
       console.log("current location = " + loc);
@@ -86,50 +106,50 @@
         $('.cat-slide-btn[data-id="all-sticks"]').removeClass('selected');
       }
     });
-</script>
+</script> -->
 
 
-<div class="lp-facet-slider">
-  <div class="dflt-styles">
-    <a class="cat-link-all" href="/c/all-composite-sticks">
+  <div class="lp-facet-slider">
+    <div class="dflt-styles">
+      <a class="cat-link-all" href="#">
         <button class="cat-slide-btn" data-id="all-sticks" type="button" name="all-sticks">
           All Sticks
         </button>
       </a>
-  </div>
-  <div class="dflt-styles">
-    <a class="cat-link-senior" href="/c/all-composite-sticks?div_main_desc=Senior">
+    </div>
+    <div class="dflt-styles">
+      <a class="cat-link-senior" href="#">
         <button class="cat-slide-btn" data-id="senior" type="button" name="senior">
           Senior
         </button>
       </a>
-    <p class="stick-desc">14+ YEARS OLD <br> FLEX = 65-112</p>
-  </div>
-  <div class="dflt-styles">
-    <a class="cat-link-intermediate" href="/c/all-composite-sticks?div_main_desc=Intermediate">
+      <p class="stick-desc">14+ YEARS OLD <br> FLEX = 65-112</p>
+    </div>
+    <div class="dflt-styles">
+      <a class="cat-link-intermediate" href="#">
         <button class="cat-slide-btn" data-id="intermediate" type="button" name="intermediate">
           intermediate
         </button>
       </a>
-    <p class="stick-desc">12-14 YEARS OLD <br> FLEX = 55-75</p>
-  </div>
-  <div class="dflt-styles">
-    <a class="cat-link-junior" href="/c/all-composite-sticks?div_main_desc=Junior">
+      <p class="stick-desc">12-14 YEARS OLD <br> FLEX = 55-75</p>
+    </div>
+    <div class="dflt-styles">
+      <a class="cat-link-junior" href="#">
         <button class="cat-slide-btn" data-id="junior" type="button" name="junior">
           Junior
         </button>
       </a>
-    <p class="stick-desc">7-13 YEARS OLD <br> FLEX = 30-60</p>
-  </div>
-  <div class="dflt-styles">
-    <a class="cat-link-youth" href="/c/all-composite-sticks?div_main_desc=Youth">
+      <p class="stick-desc">7-13 YEARS OLD <br> FLEX = 30-60</p>
+    </div>
+    <div class="dflt-styles">
+      <a class="cat-link-youth" href="#">
         <button class="cat-slide-btn" data-id="youth" type="button" name="youth">
           Youth
         </button>
       </a>
-    <p class="stick-desc">3-8 YEARS OLD <br> FLEX = 20-40</p>
+      <p class="stick-desc">3-8 YEARS OLD <br> FLEX = 20-40</p>
+    </div>
   </div>
-</div>
 
   <script type="text/javascript" src="./slick.min.js"></script>
   <script type="text/javascript" src="./index.js"></script>

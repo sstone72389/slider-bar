@@ -1,0 +1,41 @@
+<link href="/ui/styles/ph_common_51817.css" rel="stylesheet" />
+<script>
+  $(function() {
+    var loc = window.location.href;
+    console.log("current location = " + loc);
+    if (/all-composite-sticks/.test(loc)) {
+      $('.cat-slide-btn[data-id="all-sticks"]').addClass('selected');
+    }
+    if (/Senior/.test(loc)) {
+      $('.cat-slide-btn[data-id="senior"]').addClass('selected');
+    }
+    if (/Intermediate/.test(loc)) {
+      $('.cat-slide-btn[data-id="intermediate"]').addClass('selected');
+    }
+    if (/Junior/.test(loc)) {
+      $('.cat-slide-btn[data-id="junior"]').addClass('selected');
+    }
+    if (/Youth/.test(loc)) {
+      $('.cat-slide-btn[data-id="youth"]').addClass('selected');
+    }
+    if (/div_main_desc/.test(loc)) {
+      $('.cat-slide-btn[data-id="all-sticks"]').removeClass('selected');
+    }
+  });
+</script>
+
+<div class="lp-facet-slider">
+  <div class="dflt-styles"><a class="cat-link-all" href="/c/all-composite-sticks"><button class="cat-slide-btn" data-id="all-sticks" name="all-sticks" type="button">All Sticks </button></a></div>
+  <div class="dflt-styles"><a class="cat-link-senior" href="/c/all-composite-sticks?div_main_desc=Senior"><button class="cat-slide-btn" data-id="senior" name="senior" type="button">Senior </button></a>
+    <p class="stick-desc">14+ YEARS OLD <br /> FLEX = 65-112</p>
+  </div>
+  <div class="dflt-styles"><a class="cat-link-intermediate" href="/c/all-composite-sticks?div_main_desc=Intermediate"><button class="cat-slide-btn" data-id="intermediate" name="intermediate" type="button">intermediate </button></a>
+    <p class="stick-desc">12-14 YEARS OLD <br /> FLEX = 55-75</p>
+  </div>
+  <div class="dflt-styles"><a class="cat-link-junior" href="/c/all-composite-sticks?div_main_desc=Junior"><button class="cat-slide-btn" data-id="junior" name="junior" type="button">Junior </button></a>
+    <p class="stick-desc">7-13 YEARS OLD <br /> FLEX = 30-60</p>
+  </div>
+  <div class="dflt-styles"><a class="cat-link-youth" href="/c/all-composite-sticks?div_main_desc=Youth"><button class="cat-slide-btn" data-id="youth" name="youth" type="button">Youth </button></a>
+    <p class="stick-desc">3-8 YEARS OLD <br /> FLEX = 20-40</p>
+  </div>
+</div>

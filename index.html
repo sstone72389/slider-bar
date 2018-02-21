@@ -28,7 +28,7 @@
         $(this).addClass('selected');
         var slickIndex = $(this).closest('.slick-slide').data('slickIndex');
         console.log('this button is selected:', slickIndex);
-        $('.lp-facet-slider').slick('slickGoTo', slickIndex, true);
+        $('.lp-facet-slider').slick('slickGoTo', slickIndex, false);
       });
     });
   </script>
@@ -48,21 +48,14 @@
           arrows: false,
           infinite: false,
           speed: 300,
-          slidesToShow: 4,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           variableWidth: true,
           swipeToSlide: true,
           autoplay: false,
           responsive: [{
-              breakpoint: 1020,
-              settings: {
-                slidesToScroll: 2,
-              }
-            },
-            {
               breakpoint: 768,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1
               }
             }

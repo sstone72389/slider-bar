@@ -28,7 +28,7 @@
         $(this).addClass('selected');
         var slickIndex = $(this).closest('.slick-slide').data('slickIndex');
         console.log('this button is selected:', slickIndex);
-        $('.lp-facet-slider').slick('slickGoTo', slickIndex, false);
+        $('.lp-facet-slider').slick('slickGoTo', slickIndex -1, false);
       });
     });
   </script>

@@ -22,7 +22,6 @@
 
   <script>
     $(function() {
-      // this var is needed in VS
       $('body').on('click', '.cat-slide-btn', function() {
         $('.cat-slide-btn').removeClass('selected');
         $(this).addClass('selected');
@@ -37,17 +36,18 @@
   <script>
     function resizer() {
       var w = $(window).width();
-      if (w < 1000) {
+      if (w < 767) {
         if ($('.lp-facet-slider.slick-initialized').length > 0) {
           return;
         }
         $('.lp-facet-slider').slick({
-          cssEase: 'linear',
-          touchThreshold: 15,
+          // cssEase: 'cubic-bezier(0.420, 0.000, 1.000, 1.000)',
+          cssEase: 'ease',
+          touchThreshold: 70,
           dots: false,
           arrows: false,
           infinite: false,
-          speed: 300,
+          speed: 500,
           slidesToScroll: 1,
           variableWidth: true,
           swipeToSlide: true,

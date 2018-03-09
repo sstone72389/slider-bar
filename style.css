@@ -1,3 +1,4 @@
+/* use style tags on hawk!!!  */
 .dflt-styles {
   text-align: center;
   /* base style needed in case slick doesn't load */
@@ -84,6 +85,9 @@ a {
 }
 
 @media screen and (max-width:767px) {
+  .lp-facet-slider {
+    margin-left: -10px;
+  }
   .cat-slide-btn {
     font-weight: bold;
     font-size: 11px;
